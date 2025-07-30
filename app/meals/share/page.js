@@ -1,13 +1,11 @@
-'use client'
-// import { useFormState } from 'react-dom';
+'use client';
 
+import { useFormState } from 'react-dom';
 import ImagePicker from '@/components/meals/image-picker';
 import classes from './page.module.css';
 import { shareMeal } from '@/lib/actions';
 import MealsFormSubmit from '@/components/meals/meals-form-submit';
-import { useFormState } from 'react-dom';
-
-export default function ShareMealPage() {
+export default function ShareMealPage() { 
   const [state, formAction] = useFormState(shareMeal, { message: null });
   //when using  useActionState Error is fired because we can't use redirect in a client component like this and the redirect in the action
   // which is ShateMeal action , and because that the error is fired .
